@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
 
 const connectionOptions = {
   useCreateIndex: true,
@@ -12,6 +12,10 @@ mongoose.Promise = global.Promise
 const isValidId = (id) => mongoose.Types.ObjectId.isValid(id)
 
 module.exports = {
-  Sample: require("./models/sample.model"),
+  StorageConfiguration: require('./models/storage-configuration.model'),
+  FarmerConfiguration: require('./models/farmer-configuration.model'),
+  DriverConfiguration: require('./models/driver-configuration.model'),
+  User: require('./models/user.model'),
+  Session: require('./models/session.model'),
   isValidId,
 }

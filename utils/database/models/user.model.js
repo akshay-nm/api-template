@@ -9,7 +9,8 @@ schema.set('toJSON', {
   transform: function (doc, ret) {
     // remove these props when object is serialized
     delete ret._id
+    delete ret.passwordHash
   },
 })
 
-module.exports = mongoose.model('Sample', schema)
+module.exports = mongoose.model('User', schema)

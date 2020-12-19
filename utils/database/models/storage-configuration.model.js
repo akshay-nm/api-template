@@ -12,4 +12,4 @@ schema.set('toJSON', {
   },
 })
 
-module.exports = mongoose.model('Sample', schema)
+module.exports = mongoose.model('StorageConfiguration', schema)

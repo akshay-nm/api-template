@@ -1,4 +1,4 @@
 module.exports = {
-  db: require("./database"),
-  misc: require("./misc"),
+  db: require('./database'),
+  misc: require('./misc'),
 }
