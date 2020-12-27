@@ -6,18 +6,29 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "prettify": "prettier --write ."
+    "pretty": "prettier --write ./src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pop-link/poplink-api.git"
+    "url": "git+https://github.com/akshay-nm/api-template.git"
   },
   "author": "Akshay Kumar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pop-link/poplink-api/issues"
+    "url": "https://github.com/akshay-nm/api-template/issues"
   },
-  "homepage": "https://github.com/pop-link/poplink-api#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "pretty-quick — staged"
+    ]
+  },
+  "homepage": "https://github.com/akshay-nm/api-template#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -36,7 +47,11 @@
   "devDependencies": {
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "eslint": "^7.16.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
     "nodemon": "^2.0.6",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0"
   }
 }
