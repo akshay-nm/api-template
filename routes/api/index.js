@@ -23,6 +23,7 @@ router.use(
     path: [
       { url: '/api/users', methods: ['POST'] },
       { url: /^\/docs\.*/ },
+      { url: '/api/spec', methods: ['GET'] },
       { url: '/api/sessions', methods: ['POST', 'PUT'] },
       { url: '/api/sessions/refresh', methods: ['POST'] },
       { url: '/api/sessions/revoke', methods: ['POST'] },
@@ -48,5 +49,6 @@ router.use((err, req, res, next) => {
 
 router.use('/sessions', require('./sessions'))
 router.use('/users', require('./users'))
+router.use('/spec', require('./spec'))
 
 module.exports = router
