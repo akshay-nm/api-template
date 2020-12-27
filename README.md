@@ -14,6 +14,7 @@ Fairly lightweight setup.
 - Click on the green `use this template` button and complete the repo generation.
 - Modify the `package.json` file to suite your needs.
 - Do a `npm i` to generate a `package-lock.json` and you are good to go.
+- You need to add a route for `/favicon.ico`
 
 ## Future plans
 
